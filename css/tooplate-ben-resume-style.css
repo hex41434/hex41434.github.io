@@ -32,6 +32,8 @@ https://www.tooplate.com/view/2120-ben-resume
 
   :root {
     --primary-color:        #ffd500;
+    --accent-color:         #0f766e;
+    --surface-color:        #f6f8f8;
     --white-color:          #ffffff;
     --dark-color:           #010101;
     --menu-bg-color:        #212529;
@@ -109,6 +111,10 @@ https://www.tooplate.com/view/2120-ben-resume
 
   .section-padding {
     padding: 6rem 0;
+  }
+
+  section {
+    scroll-margin-top: 72px;
   }
 
   .custom-icon {
@@ -302,32 +308,94 @@ https://www.tooplate.com/view/2120-ben-resume
      HERO                
   -----------------------------------------*/
 
-  .hero-title,
-  .email-link {
+  .hero {
+    min-height: 92vh;
+    padding: 6rem 0 3rem;
+  }
+
+  .hero-portrait {
+    max-height: 620px;
+    object-fit: contain;
+  }
+
+  .hero-copy {
+    width: 100%;
+    max-width: 720px;
+  }
+
+  .hero-kicker {
+    color: var(--accent-color);
+    font-size: 18px;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-title {
     background: var(--dark-color);
-    border-radius: var(--border-radius-medium);
+    border-radius: 8px;
     color: var(--white-color);
     display: inline-block;
     margin: 0.5rem 0;
-    padding: 0.5rem 2rem 1.5rem 2rem;
-	font-size: 2.2em;
+    padding: 0.6rem 1.4rem 1rem;
+    font-size: 3.2rem;
+    line-height: 1.08;
+    letter-spacing: 0;
+  }
+
+  .hero-subtitle {
+    color: var(--dark-color);
+    font-size: 22px;
+    line-height: 1.7;
+    margin: 1rem 0 1.5rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .secondary-btn {
+    background: var(--accent-color);
+    color: var(--white-color);
+  }
+
+  .hero-contact {
+    background: var(--surface-color);
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 1rem 0 0;
+    padding: 1rem 1.2rem;
+  }
+
+  .hero-contact a,
+  .hero-contact span {
+    color: var(--dark-color);
+    display: block;
+    font-weight: var(--font-weight-normal);
+    margin-bottom: 0.2rem;
+  }
+
+  .hero-contact a:hover {
+    color: var(--accent-color);
   }
 
   .email-link {
     background: var(--primary-color);
+    border-radius: var(--border-radius-medium);
     color: var(--dark-color);
+    display: inline-block;
     font-size: var(--h4-font-size);
+    margin: 0.5rem 0;
     padding: 0.5rem 2rem 1rem 2rem;
   }
 
-  .email-link:hover {
-    background: var(--dark-color);
-    color: var(--white-color);
-  }
-
-
   /*---------------------------------------
-     ABOUT                
+     ABOUT
   -----------------------------------------*/
   
   .about-third {
@@ -348,6 +416,40 @@ https://www.tooplate.com/view/2120-ben-resume
     margin-right: 1rem;
   }
 
+  /*---------------------------------------
+     SERVICES
+  -----------------------------------------*/
+
+  .services {
+    background: var(--surface-color);
+  }
+
+  .service-card {
+    background: var(--white-color);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    height: 100%;
+    margin-bottom: 1.5rem;
+    padding: 2rem;
+  }
+
+  .service-icon {
+    color: var(--accent-color);
+    font-size: 28px;
+    margin-bottom: 1rem;
+  }
+
+  .service-card h6 {
+    font-size: 22px;
+    margin-bottom: 1rem;
+  }
+
+  .service-card p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 0;
+  }
+
 
   /*---------------------------------------
      FAQ                 
@@ -357,9 +459,16 @@ https://www.tooplate.com/view/2120-ben-resume
     padding: 0;
   }
 
+  .faq .card {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+
   .faq .btn-link {
     color: var(--dark-color);
     font-size: var(--h6-font-size);
+    line-height: 1.35;
     text-align: left;
     display: block;
     width: 100%;
@@ -389,6 +498,43 @@ https://www.tooplate.com/view/2120-ben-resume
 
   .testimonials {
     background: #f9f9f9;
+  }
+
+  .skills-grid {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .skill-card {
+    background: var(--white-color);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    height: 100%;
+    padding: 1.5rem;
+  }
+
+  .skill-card img {
+    border-radius: 8px;
+    height: 58px;
+    margin-bottom: 1rem;
+    object-fit: contain;
+    width: 58px;
+  }
+
+  .skill-card h6 {
+    font-size: 21px;
+    margin-bottom: 0.8rem;
+  }
+
+  .skill-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+
+  .testimonials-thumb {
+    align-items: center;
   }
 
   .testimonials-image {
@@ -518,6 +664,26 @@ https://www.tooplate.com/view/2120-ben-resume
     font-size: var(--base-font-size);
   }
 
+  .contact-details {
+    background: var(--surface-color);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    text-align: left;
+  }
+
+  .contact-details a,
+  .contact-details span {
+    color: var(--dark-color);
+    display: block;
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .contact-details a:hover {
+    color: var(--accent-color);
+  }
+
 
   /*---------------------------------------
      SOCIAL LINKS              
@@ -582,6 +748,10 @@ https://www.tooplate.com/view/2120-ben-resume
       font-size: 22px;
       padding: 0.5rem 2rem 0.7rem 2rem;
     }
+
+    .skills-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
   }
 
   @media screen and (max-width: 991px) {
@@ -601,6 +771,25 @@ https://www.tooplate.com/view/2120-ben-resume
       position: relative;
       top: 1.5rem;
     }
+
+    .hero {
+      min-height: auto;
+      padding-top: 5rem;
+    }
+
+    .hero-title {
+      font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 19px;
+    }
+
+    .hero-contact a,
+    .hero-contact span {
+      display: block;
+      margin-right: 0;
+    }
   }
 
   @media screen and (max-width: 480px) {
@@ -612,5 +801,9 @@ https://www.tooplate.com/view/2120-ben-resume
     .email-link {
       font-size: 20px;
       padding: 0.3rem 2rem 0.6rem 2rem;
+    }
+
+    .skills-grid {
+      grid-template-columns: 1fr;
     }
   }

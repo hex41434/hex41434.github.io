@@ -143,7 +143,17 @@
         }
 
         .social-links a {
+            align-items: center;
+            display: inline-flex;
             font-weight: 600;
+            gap: 0.45rem;
+        }
+
+        .social-link-icon {
+            fill: currentColor;
+            flex-shrink: 0;
+            height: 1.1rem;
+            width: 1.1rem;
         }
 
         .btn {
@@ -251,7 +261,6 @@
         }
 
         .expertise-grid,
-        .skills-grid,
         .contact-grid {
             display: grid;
             gap: 1rem;
@@ -261,12 +270,47 @@
             grid-template-columns: repeat(3, minmax(0, 1fr));
         }
 
-        .skills-grid {
-            grid-template-columns: repeat(4, minmax(0, 1fr));
+        .skills-showcase {
+            display: grid;
+            gap: 1.25rem;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .skill-item {
+            align-items: center;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            display: flex;
+            gap: 1rem;
+            padding: 1.25rem;
+        }
+
+        .skill-item-image {
+            flex-shrink: 0;
+        }
+
+        .skill-item-image img {
+            border-radius: 8px;
+            display: block;
+            height: 72px;
+            object-fit: contain;
+            width: 72px;
+        }
+
+        .skill-item-info p {
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-item-info h6 {
+            color: var(--ink);
+            font-size: 1rem;
+            font-weight: 700;
+            margin: 0;
         }
 
         .card,
-        .skill-category,
         .case-study,
         .contact-item {
             background: var(--surface);
@@ -276,13 +320,11 @@
         }
 
         .card p,
-        .skill-category p,
         .case-study p,
         .contact-item p {
             margin-bottom: 0;
         }
 
-        .skill-tags,
         .project-tags {
             display: flex;
             flex-wrap: wrap;
@@ -290,7 +332,6 @@
             margin-top: 0.9rem;
         }
 
-        .tag,
         .tech-tag {
             background: var(--white);
             border: 1px solid rgba(15, 118, 110, 0.28);
@@ -373,9 +414,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .skills-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
         }
 
         @media (max-width: 620px) {
@@ -396,7 +434,7 @@
                 padding: 2.4rem 0;
             }
 
-            .skills-grid {
+            .skills-showcase {
                 grid-template-columns: 1fr;
             }
 
@@ -429,16 +467,18 @@
         </p>
 
         <div class="social-links">
-            <a href="mailto:aida.farahani@gmail.com">Email</a>
-            <a href="https://www.linkedin.com/in/aidafarahani/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://github.com/hex41434" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://hex41434.github.io/">Website</a>
-        </div>
-
-        <div class="cta-buttons">
-            <a href="#contact" class="btn btn-primary">Get in Touch</a>
-            <a href="cv/Aida_Farahani.pdf" class="btn btn-secondary" download>Download CV</a>
-            <a href="cv/Aida_Farahani.md" class="btn btn-secondary">Editable CV</a>
+            <a href="mailto:aida.farahani@gmail.com">
+                <svg class="social-link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                Email
+            </a>
+            <a href="https://www.linkedin.com/in/aidafarahani/" target="_blank" rel="noopener">
+                <svg class="social-link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.062 2.062 0 0 1 2.063-2.064 2.062 2.062 0 0 1 2.063 2.064 2.062 2.062 0 0 1-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn
+            </a>
+            <a href="https://github.com/hex41434" target="_blank" rel="noopener">
+                <svg class="social-link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                GitHub
+            </a>
         </div>
     </header>
 
@@ -470,8 +510,8 @@
                         Industrial computer vision, data-centric AI, and production-oriented workflows
                     </div>
                     <div class="highlight">
-                        <strong>System Strength</strong>
-                        Hybrid AI systems that combine vision, geometry, language, and deployment constraints
+                        <strong>Applied &amp; Scientific Foundation</strong>
+                        Practical AI for real-world systems, grounded in scientific machine learning and research methods
                     </div>
                 </div>
             </div>
@@ -493,8 +533,8 @@
                     <p>End-to-end pipelines, workflow integration, production-oriented design, validation logic, and deployment planning.</p>
                 </div>
                 <div class="card">
-                    <h3>Hybrid Systems</h3>
-                    <p>Vision plus geometry plus language workflows, including CAD/DXF validation and multimodal retrieval.</p>
+                    <h3>Multimodal AI</h3>
+                    <p>Vision-language workflows: semantic retrieval, document/PDF understanding, and structured extraction from mixed media.</p>
                 </div>
                 <div class="card">
                     <h3>Deployment</h3>
@@ -508,76 +548,47 @@
         </section>
 
         <section id="skills">
-            <h2>Skills &amp; Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Machine Learning</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">PyTorch</span>
-                        <span class="tag">TensorFlow</span>
-                        <span class="tag">scikit-learn</span>
-                        <span class="tag">pandas</span>
-                        <span class="tag">PyTorch Geometric</span>
+            <h2>Skills</h2>
+            <div class="skills-showcase">
+                <article class="skill-item">
+                    <div class="skill-item-image">
+                        <img src="images/testimonials/python.png" alt="Python libraries">
                     </div>
-                </div>
+                    <div class="skill-item-info">
+                        <p>Python libraries (pandas, trimesh, plotly, meshlab, PyTorch Geometric) plus 3D and simulation workflows: mesh autoencoders, SDF, and FEM data.</p>
+                        <h6>Python libraries</h6>
+                    </div>
+                </article>
 
-                <div class="skill-category">
-                    <h3>Computer Vision</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Detection</span>
-                        <span class="tag">Segmentation</span>
-                        <span class="tag">Preprocessing</span>
-                        <span class="tag">Industrial imagery</span>
-                        <span class="tag">Model evaluation</span>
+                <article class="skill-item">
+                    <div class="skill-item-image">
+                        <img src="images/testimonials/PyTorch.png" alt="Frameworks">
                     </div>
-                </div>
+                    <div class="skill-item-info">
+                        <p>PyTorch, TensorFlow, and scikit-learn for model development, plus computer vision: detection, segmentation, industrial imagery, preprocessing, and evaluation.</p>
+                        <h6>Frameworks</h6>
+                    </div>
+                </article>
 
-                <div class="skill-category">
-                    <h3>3D &amp; Geometry</h3>
-                    <div class="skill-tags">
-                        <span class="tag">trimesh</span>
-                        <span class="tag">Mesh autoencoders</span>
-                        <span class="tag">SDF</span>
-                        <span class="tag">FEM workflows</span>
-                        <span class="tag">DXF validation</span>
+                <article class="skill-item">
+                    <div class="skill-item-image">
+                        <img src="images/testimonials/AITools.png" alt="ML Tools">
                     </div>
-                </div>
+                    <div class="skill-item-info">
+                        <p>Docker, conda, Linux, Git, Jenkins, and Jupyter workflows; multimodal AI with RAG, CLIP, document/PDF understanding, and local LLMs (Ollama, Unsloth).</p>
+                        <h6>ML Tools</h6>
+                    </div>
+                </article>
 
-                <div class="skill-category">
-                    <h3>Multimodal &amp; LLM</h3>
-                    <div class="skill-tags">
-                        <span class="tag">RAG pipelines</span>
-                        <span class="tag">CLIP embeddings</span>
-                        <span class="tag">Multimodal retrieval</span>
-                        <span class="tag">Document understanding</span>
-                        <span class="tag">Ollama</span>
-                        <span class="tag">Unsloth</span>
+                <article class="skill-item">
+                    <div class="skill-item-image">
+                        <img src="images/testimonials/prog.png" alt="Programming Skills">
                     </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Deployment</h3>
-                    <div class="skill-tags">
-                        <span class="tag">CoreML</span>
-                        <span class="tag">Swift/iOS</span>
-                        <span class="tag">On-device inference</span>
-                        <span class="tag">Model export</span>
+                    <div class="skill-item-info">
+                        <p>OOP and languages including C#.NET, C++, MATLAB, and Python; deployment with CoreML, Swift/iOS, on-device inference, and model export.</p>
+                        <h6>Programming Skills</h6>
                     </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Engineering</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Docker</span>
-                        <span class="tag">Linux</span>
-                        <span class="tag">Git</span>
-                        <span class="tag">Jenkins</span>
-                        <span class="tag">C++</span>
-                        <span class="tag">MATLAB</span>
-                        <span class="tag">C#.NET</span>
-                    </div>
-                </div>
+                </article>
             </div>
         </section>
 
@@ -599,24 +610,6 @@
                         <span class="tech-tag">Computer Vision</span>
                         <span class="tech-tag">Segmentation</span>
                         <span class="tech-tag">Data-Centric AI</span>
-                    </div>
-                </article>
-
-                <article class="case-study">
-                    <div class="project-header">
-                        <h3>Vision + CAD (DXF) Understanding</h3>
-                        <span class="project-date">Hybrid AI</span>
-                    </div>
-                    <p class="project-description">
-                        Built hybrid pipelines combining image analysis with geometric validation for technical drawing understanding.
-                    </p>
-                    <div class="project-impact">
-                        <strong>Focus:</strong> linking visual elements to structured CAD data, region grouping, label association, and DXF-based consistency checks.
-                    </div>
-                    <div class="project-tags">
-                        <span class="tech-tag">DXF</span>
-                        <span class="tech-tag">Geometry</span>
-                        <span class="tech-tag">Vision-Language</span>
                     </div>
                 </article>
 
@@ -712,6 +705,29 @@
 
                 <article class="case-study">
                     <div class="project-header">
+                        <h3>ML@Karoprod (BMBF)</h3>
+                        <span class="project-date">Feb 2018 - Jun 2021</span>
+                    </div>
+                    <p class="project-description">
+                        Researcher on the BMBF project applying machine learning for process and quality prediction in automotive body production.
+                    </p>
+                    <div class="project-impact">
+                        <strong>Focus:</strong> FEM-based dataset generation, deformation-property prediction, reinforcement learning for process modeling, and simulation-to-ML workflows for forming processes.
+                    </div>
+                    <div class="project-tags">
+                        <span class="tech-tag">FEM</span>
+                        <span class="tech-tag">Scientific ML</span>
+                        <span class="tech-tag">Reinforcement Learning</span>
+                        <span class="tech-tag">Automotive Production</span>
+                    </div>
+                    <p class="project-description">
+                        Partners: Fraunhofer IWU Dresden, Scale GmbH, TU Chemnitz.
+                        <a href="https://hamkerlab.github.io/ML-Karoprod-MeshPredictor/" target="_blank" rel="noopener">Project code</a>
+                    </p>
+                </article>
+
+                <article class="case-study">
+                    <div class="project-header">
                         <h3>Smart Airsense (BMBF)</h3>
                         <span class="project-date">Jan 2022 - 2024</span>
                     </div>
@@ -752,12 +768,6 @@
                     <p>IAU Tehran</p>
                     <p>Thesis: Persian handwriting recognition</p>
                 </div>
-                <div class="education-item">
-                    <h3>ML@Karoprod (BMBF)</h3>
-                    <p>Machine learning for process and quality prediction in automotive production.</p>
-                    <p>Contributions included FEM-based dataset generation, reinforcement learning for process modeling, and prediction of deformation-related properties.</p>
-                    <p><a href="https://hamkerlab.github.io/ML-Karoprod-MeshPredictor/">Project code</a></p>
-                </div>
             </div>
         </section>
 
@@ -767,7 +777,6 @@
                 <div class="contact-item">
                     <h3>Email</h3>
                     <p><a href="mailto:aida.farahani@gmail.com">aida.farahani@gmail.com</a></p>
-                    <p><a href="mailto:a.farahani@tki-chemnitz.de">a.farahani@tki-chemnitz.de</a></p>
                 </div>
                 <div class="contact-item">
                     <h3>Profiles</h3>
@@ -780,14 +789,12 @@
                     <p><a href="tel:+4915758751188">+49-157-5875-1188</a></p>
                 </div>
             </div>
-            <p style="margin-top: 1.8rem; text-align: center;">
-                I am interested in AI solution design, industrial computer vision, data-centric AI, and collaboration on practical AI systems.
-            </p>
+
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Aida Farahani. Built as an editable portfolio from <a href="cv/Aida_Farahani.md">Markdown CV content</a>.</p>
+        <p>&copy; 2026 Aida Farahani.</p>
     </footer>
 </body>
 </html>

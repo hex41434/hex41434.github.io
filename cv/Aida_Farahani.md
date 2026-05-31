@@ -1,15 +1,30 @@
-# Aida Farahani, PhD
-
-**AI Solutions Engineer | Industrial AI | Computer Vision**
-
-Email: [aida.farahani@gmail.com](mailto:aida.farahani@gmail.com)  
-Phone: [+49-157-5875-1188](tel:+4915758751188)  
-Location: Chemnitz, Germany  
-Website: [https://hex41434.github.io/](https://hex41434.github.io/)  
-LinkedIn: [https://www.linkedin.com/in/aidafarahani/](https://www.linkedin.com/in/aidafarahani/)  
-GitHub: [https://github.com/hex41434](https://github.com/hex41434)
-
 ---
+stylesheet: cv-pdf.css
+pdf_options:
+  format: A4
+  printBackground: true
+  margin:
+    top: 14mm
+    bottom: 14mm
+    left: 16mm
+    right: 16mm
+---
+
+<div class="cv-header">
+  <img src="../images/aifa.png" alt="Aida Farahani" class="cv-photo">
+  <div>
+    <h1 class="cv-name">Aida Farahani, PhD</h1>
+    <p class="cv-tagline">AI Solutions Engineer · Industrial AI · Computer Vision</p>
+    <p class="cv-contact">
+      <a href="mailto:aida.farahani@gmail.com">aida.farahani@gmail.com</a> ·
+      <a href="tel:+4915758751188">+49-157-5875-1188</a> ·
+      Chemnitz, Germany<br>
+      <a href="https://hex41434.github.io/">hex41434.github.io</a> ·
+      <a href="https://www.linkedin.com/in/aidafarahani/">LinkedIn</a> ·
+      <a href="https://github.com/hex41434">GitHub</a>
+    </p>
+  </div>
+</div>
 
 ## About
 
@@ -19,13 +34,9 @@ My work centers on industrial computer vision, data-centric AI, and end-to-end s
 
 I specialize in improving model performance through data refinement and in designing hybrid systems that combine vision, geometry, and language models.
 
-**PhD in Artificial Intelligence** — Technical University of Chemnitz
-
-**Applied AI Focus** — Industrial computer vision, data-centric AI, and production-oriented workflows
-
-**Applied & Scientific Foundation** — Practical AI for real-world systems, grounded in scientific machine learning and research methods
-
----
+<p class="highlight-line"><strong>PhD in Artificial Intelligence</strong> — Technical University of Chemnitz</p>
+<p class="highlight-line"><strong>Applied AI Focus</strong> — Industrial computer vision, data-centric AI, and production-oriented workflows</p>
+<p class="highlight-line"><strong>Applied &amp; Scientific Foundation</strong> — Practical AI for real-world systems, grounded in scientific machine learning and research methods</p>
 
 ## Core Expertise
 
@@ -41,25 +52,25 @@ I specialize in improving model performance through data refinement and in desig
 
 **Scientific ML** — FEM surrogate modeling, 3D deformation learning, mesh autoencoders, implicit representations, and RL for process modeling.
 
----
-
 ## Skills
 
-**Python libraries** — Python libraries (pandas, trimesh, plotly, meshlab, PyTorch Geometric) plus 3D and simulation workflows: mesh autoencoders, SDF, and FEM data.
+<div class="skills-grid">
 
-**Frameworks** — PyTorch, TensorFlow, and scikit-learn for model development, plus computer vision: detection, segmentation, industrial imagery, preprocessing, and evaluation.
+**Python libraries** — pandas, trimesh, plotly, meshlab, PyTorch Geometric; mesh autoencoders, SDF, and FEM data workflows.
 
-**ML Tools** — Docker, conda, Linux, Git, Jenkins, and Jupyter workflows; multimodal AI with RAG, CLIP, document/PDF understanding, and local LLMs (Ollama, Unsloth).
+**Frameworks** — PyTorch, TensorFlow, scikit-learn; computer vision (detection, segmentation, industrial imagery, preprocessing, evaluation).
 
-**Programming Skills** — OOP and languages including C#.NET, C++, MATLAB, and Python; deployment with CoreML, Swift/iOS, on-device inference, and model export.
+**ML Tools** — Docker, conda, Linux, Git, Jenkins, Jupyter; RAG, CLIP, document/PDF understanding, Ollama, Unsloth.
 
----
+**Programming &amp; deployment** — C#.NET, C++, MATLAB, Python; CoreML, Swift/iOS, on-device inference, model export.
+
+</div>
 
 ## Selected Projects
 
 ### Multimodal Image Search
 
-*Retrieval · 2025*
+<p class="project-meta">Retrieval · 2025</p>
 
 Built semantic image retrieval tools using language-driven search and similarity-based clustering.
 
@@ -67,7 +78,7 @@ Built semantic image retrieval tools using language-driven search and similarity
 
 ### Document & PDF Understanding
 
-*Vision-Language · 2025*
+<p class="project-meta">Vision-Language · 2025</p>
 
 Developed pipelines for extracting structured data from documents using vision-language methods.
 
@@ -75,7 +86,7 @@ Developed pipelines for extracting structured data from documents using vision-l
 
 ### Data-Centric Model Improvement
 
-*Model Reliability · 2024 – present*
+<p class="project-meta">Model Reliability · 2024 – present</p>
 
 Designed workflows to improve model performance through targeted data quality improvements.
 
@@ -83,7 +94,7 @@ Designed workflows to improve model performance through targeted data quality im
 
 ### Industrial Vision: Trench & Fiber Detection
 
-*Industrial AI · 2024*
+<p class="project-meta">Industrial AI · 2024</p>
 
 Designed segmentation pipelines for detecting trenches, ducts, and fittings in noisy field conditions.
 
@@ -91,7 +102,7 @@ Designed segmentation pipelines for detecting trenches, ducts, and fittings in n
 
 ### On-Device Vision Inference
 
-*Deployment · 2024*
+<p class="project-meta">Deployment · 2024</p>
 
 Implemented real-time vision models on mobile devices with model optimization and iOS integration.
 
@@ -99,17 +110,17 @@ Implemented real-time vision models on mobile devices with model optimization an
 
 ### Smart Airsense (BMBF)
 
-*Jan 2022 – 2024*
+<p class="project-meta">Jan 2022 – 2024</p>
 
 Researcher on the BMBF project investigating AI methods for an interactive health assistant based on human-in-the-loop machine learning.
 
-**Focus:** completed the first phase of a time series classification project using air particle sensor measurements to predict environmental events.
+**Focus:** time series classification using air particle sensor measurements to predict environmental events.
 
 Partners: Corant GmbH, TU Chemnitz.
 
 ### 3D Deformation Modeling (FEM Surrogate)
 
-*PhD Research · 2021 – 2023*
+<p class="project-meta">PhD Research · 2021 – 2023</p>
 
 Used reinforcement learning approaches for reverse engineering of metal forming process chains (prediction of actions for a desired deformed metal part).
 
@@ -117,30 +128,52 @@ Used reinforcement learning approaches for reverse engineering of metal forming 
 
 ### ML@Karoprod (BMBF)
 
-*Feb 2018 – Jun 2021*
+<p class="project-meta">Feb 2018 – Jun 2021</p>
 
 Researcher on the BMBF project applying machine learning for process and quality prediction in automotive body production.
 
 **Focus:** FEM-based dataset generation, deformation-property prediction, reinforcement learning for process modeling, and simulation-to-ML workflows for forming processes.
 
 Partners: Fraunhofer IWU Dresden, Scale GmbH, TU Chemnitz.  
-Project code: [https://hamkerlab.github.io/ML-Karoprod-MeshPredictor/](https://hamkerlab.github.io/ML-Karoprod-MeshPredictor/)
-
----
+Project code: [hamkerlab.github.io/ML-Karoprod-MeshPredictor](https://hamkerlab.github.io/ML-Karoprod-MeshPredictor/)
 
 ## Research & Education
 
+<div class="education-item">
+
 ### PhD in Artificial Intelligence
 
-Technical University of Chemnitz  
-Thesis: *Deep Learning Approaches for 3D Deformation (FEM Distillation)*
+<p class="education-meta">Technical University of Chemnitz, Germany · 2026</p>
+
+Thesis: *Exploring Deep Learning Approaches for 3D Deformation : Toward Finite Element Method Distillation*
+
+</div>
+
+<div class="education-item">
 
 ### M.Sc. Mechatronics Engineering
 
-K.N. Toosi University  
+<p class="education-meta">K.N. Toosi University of Technology, Iran · 2010</p>
+
 Thesis: *Visual servoing and object pose estimation*
+
+</div>
+
+<div class="education-item">
 
 ### B.Sc. Computer Software Engineering
 
-IAU Tehran  
+<p class="education-meta">IAU Tehran Branch, Iran · 2006</p>
+
 Thesis: *Persian handwriting recognition*
+
+</div>
+
+## Languages
+
+<ul class="languages-list">
+  <li><strong>Farsi</strong> — native</li>
+  <li><strong>English</strong> — business fluent</li>
+  <li><strong>German</strong> — B2 (upper-intermediate, professional working proficiency)</li>
+  <li><strong>French</strong> — basic</li>
+</ul>

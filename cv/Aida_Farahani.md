@@ -2,135 +2,129 @@
 
 **AI Solutions Engineer | Industrial AI | Computer Vision**
 
-Email: [aida.farahani@gmail.com](mailto:aida.farahani@gmail.com)
-Phone: +49-157-5875-1188
-Location: Chemnitz, Germany
-Website: https://hex41434.github.io/
-LinkedIn: https://www.linkedin.com/in/aidafarahani/
-GitHub: https://github.com/hex41434
+Email: [aida.farahani@gmail.com](mailto:aida.farahani@gmail.com)  
+Phone: [+49-157-5875-1188](tel:+4915758751188)  
+Location: Chemnitz, Germany  
+Website: [https://hex41434.github.io/](https://hex41434.github.io/)  
+LinkedIn: [https://www.linkedin.com/in/aidafarahani/](https://www.linkedin.com/in/aidafarahani/)  
+GitHub: [https://github.com/hex41434](https://github.com/hex41434)
 
 ---
 
-## Professional Summary
+## About
 
-AI Solutions Engineer with a PhD in Artificial Intelligence, focused on building practical, reliable AI systems for real-world applications.
+I am an AI Solutions Engineer with a PhD in Artificial Intelligence, focused on building practical, reliable AI systems for real-world applications.
 
-My work centers on industrial computer vision, data-centric AI, and end-to-end system design—from problem definition and dataset construction to model development, evaluation, and deployment.
+My work centers on industrial computer vision, data-centric AI, and end-to-end system design: from problem definition and dataset construction to model development, evaluation, integration, and deployment.
 
-I specialize in improving model performance through data refinement, and in designing hybrid systems and language models. contrary to standard datasets and benchmarks, I have experienced working on real data. 
+I specialize in improving model performance through data refinement and in designing hybrid systems that combine vision, geometry, and language models.
+
+**PhD in Artificial Intelligence** — Technical University of Chemnitz
+
+**Applied AI Focus** — Industrial computer vision, data-centric AI, and production-oriented workflows
+
+**Applied & Scientific Foundation** — Practical AI for real-world systems, grounded in scientific machine learning and research methods
 
 ---
 
 ## Core Expertise
 
-* **Computer Vision**: object detection, instance segmentation, industrial image understanding
+**Computer Vision** — Object detection, instance segmentation, industrial image understanding, field-condition evaluation, and visual inspection workflows.
 
-* **Data-Centric AI**: dataset design, annotation strategy, class balancing, failure-case analysis
+**Data-Centric AI** — Dataset design, annotation strategy, class balancing, failure-case analysis, and iterative model improvement.
 
-* **AI Systems**: end-to-end pipelines, workflow integration, production-oriented design
+**AI Systems** — End-to-end pipelines, workflow integration, production-oriented design, validation logic, and deployment planning.
 
-* **Deployment**: CoreML, on-device inference
+**Multimodal AI** — Vision-language workflows: semantic retrieval, document/PDF understanding, and structured extraction from mixed media.
 
-* **Scientific Machine Learning**:
-  FEM surrogate modeling, 3D deformation learning, reinforcement learning for process modeling
+**Deployment** — CoreML, Swift/iOS integration, on-device inference, model export, and mobile visualization prototypes.
+
+**Scientific ML** — FEM surrogate modeling, 3D deformation learning, mesh autoencoders, implicit representations, and RL for process modeling.
 
 ---
 
-## Technical Skills
+## Skills
 
-### Machine Learning
+**Python libraries** — Python libraries (pandas, trimesh, plotly, meshlab, PyTorch Geometric) plus 3D and simulation workflows: mesh autoencoders, SDF, and FEM data.
 
-Python, PyTorch, TensorFlow, scikit-learn, PyTorch Geometric
+**Frameworks** — PyTorch, TensorFlow, and scikit-learn for model development, plus computer vision: detection, segmentation, industrial imagery, preprocessing, and evaluation.
 
-### Computer Vision
+**ML Tools** — Docker, conda, Linux, Git, Jenkins, and Jupyter workflows; multimodal AI with RAG, CLIP, document/PDF understanding, and local LLMs (Ollama, Unsloth).
 
-Detection, segmentation, preprocessing pipelines
-
-### 3D & Geometry
-
-trimesh, mesh autoencoders, implicit representations (SDF), FEM data workflows
-
-### Multimodal & LLM
-
-RAG pipelines, CLIP embeddings, multimodal retrieval, document understanding
-Ollama, Unsloth (local/private LLM workflows)
-
-### Engineering & Deployment
-
-CoreML, Swift (iOS), Docker, Linux, Git, Jenkins
-C++, MATLAB, C#.NET
+**Programming Skills** — OOP and languages including C#.NET, C++, MATLAB, and Python; deployment with CoreML, Swift/iOS, on-device inference, and model export.
 
 ---
 
 ## Selected Projects
 
-### Industrial Vision: On-Device Trench & Fiber Detection
-
-Designed segmentation pipelines for detecting trenches, ducts, and fittings in noisy field conditions.
-
-Full ML Lifecycle : 
-
-Data
-* Dataset refinement and class balancing
-* Annotation strategy design
-* Failure-case driven dataset updates
-* Data Augmentation via GenAI  
-Model
-* Instance segmentation for complex scenes
-* Iterative Data-Centric Model Improvement
-Real world images
-* Field-condition evaluation
-* Implemented real-time vision models on mobile devices.
-Deployment
-* Model optimization and CoreML export
-* iOS integration and visualization
-
----
-
-### 3D Deformation Modeling (FEM Surrogate) - My PhD Research Project
-
-Here I applied deepL to speed up the FEM simluation on industrial data from a 20 min process to few seconds. so that the experts could interactively see the changes after parameter modification. 
-
-also proposed an innovative approach to reverse engineering a multi step deformation process ( sequential formng ) via Reinforcement learning methods
-
-and use of implicit 3d representations to handle dense, high res and large meshes using neural networks. this has an advantage over explicit methods that receive the whole structure at once and require larger networks, for larger meshes.  
-
-* Mesh autoencoders and implicit representations
-* Sequential deformation modeling
-* Reinforcement learning for process optimization
-
----
-
 ### Multimodal Image Search
 
-Built semantic image retrieval tools.
+*Retrieval · 2025*
 
-* CLIP-based embeddings
-* Language-driven image search
-* Similarity-based clustering
-* find near-duplicate images in a large 
-* search secific objects inside 20K image directories
+Built semantic image retrieval tools using language-driven search and similarity-based clustering.
 
----
+**Focus:** CLIP-based embeddings, multimodal retrieval, image search, and clustering workflows.
 
 ### Document & PDF Understanding
 
-Developed local pipelines for extracting structured data from documents using vision-language methods. (offline for better data provacy ) 
+*Vision-Language · 2025*
 
-* convert complicated tables to excel sheets
-* document translation while keeping the format and style
-* QA with PDF files 
+Developed pipelines for extracting structured data from documents using vision-language methods.
 
+**Focus:** document understanding, structured extraction, multimodal parsing, and workflow automation.
 
+### Data-Centric Model Improvement
 
-### AI support system 
+*Model Reliability · 2024 – present*
 
-to extract data from tickets and facilitate search for support team. 
+Designed workflows to improve model performance through targeted data quality improvements.
 
-* Clean data and setup datasets 
-* RAG system 
-* use AI for validation test 
-* extract data from knowledge base
+**Focus:** annotation strategy, failure-case driven dataset updates, and iterative performance optimization.
+
+### Industrial Vision: Trench & Fiber Detection
+
+*Industrial AI · 2024*
+
+Designed segmentation pipelines for detecting trenches, ducts, and fittings in noisy field conditions.
+
+**Focus:** instance segmentation for complex scenes, dataset refinement, class balancing, and field-condition evaluation.
+
+### On-Device Vision Inference
+
+*Deployment · 2024*
+
+Implemented real-time vision models on mobile devices with model optimization and iOS integration.
+
+**Focus:** CoreML export, Swift/iOS integration, visualization, and field-ready inference prototypes.
+
+### Smart Airsense (BMBF)
+
+*Jan 2022 – 2024*
+
+Researcher on the BMBF project investigating AI methods for an interactive health assistant based on human-in-the-loop machine learning.
+
+**Focus:** completed the first phase of a time series classification project using air particle sensor measurements to predict environmental events.
+
+Partners: Corant GmbH, TU Chemnitz.
+
+### 3D Deformation Modeling (FEM Surrogate)
+
+*PhD Research · 2021 – 2023*
+
+Used reinforcement learning approaches for reverse engineering of metal forming process chains (prediction of actions for a desired deformed metal part).
+
+**Focus:** sequential deformation modeling and reinforcement learning for process optimization.
+
+### ML@Karoprod (BMBF)
+
+*Feb 2018 – Jun 2021*
+
+Researcher on the BMBF project applying machine learning for process and quality prediction in automotive body production.
+
+**Focus:** FEM-based dataset generation, deformation-property prediction, reinforcement learning for process modeling, and simulation-to-ML workflows for forming processes.
+
+Partners: Fraunhofer IWU Dresden, Scale GmbH, TU Chemnitz.  
+Project code: [https://hamkerlab.github.io/ML-Karoprod-MeshPredictor/](https://hamkerlab.github.io/ML-Karoprod-MeshPredictor/)
 
 ---
 
@@ -138,51 +132,15 @@ to extract data from tickets and facilitate search for support team.
 
 ### PhD in Artificial Intelligence
 
-Technical University of Chemnitz
-
+Technical University of Chemnitz  
 Thesis: *Deep Learning Approaches for 3D Deformation (FEM Distillation)*
-
----
 
 ### M.Sc. Mechatronics Engineering
 
-K.N. Toosi University
-
-Thesis: Visual servoing and object pose estimation
-
----
+K.N. Toosi University  
+Thesis: *Visual servoing and object pose estimation*
 
 ### B.Sc. Computer Software Engineering
 
-IAU Tehran Branch
-
-Thesis: Persian handwriting recognition
-
----
-
-## Selected Research Project
-
-### ML@Karoprod (BMBF)
-
-Machine learning for process and quality prediction in automotive production.
-
-* FEM-based dataset generation
-* Reinforcement learning for process modeling
-* Prediction of deformation-related properties
-
-Code: https://hamkerlab.github.io/ML-Karoprod-MeshPredictor/
-
---- 
-
-### Smart Airsense (BMBF)
-
-Researcher, BMBF Project Smart Airsense  
-January 2022 - 2024
-
-BMBF project: *Erforschung von KI-Methoden zur Entwicklung eines interaktiven Gesundheitsassistenten auf Basis von Human in the Loop Machine Learning.*
-
-Partners: Corant GmbH, TU Chemnitz
-
-* Completed the first phase of a time series classification project using air particle sensor measurements
-* Analyzed sensor data to predict environmental events
-* Developed predictive models and contributed to project success
+IAU Tehran  
+Thesis: *Persian handwriting recognition*

@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aida Farahani - AI Solution Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e8eef2;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #3498db;
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Header Section */
+        header {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #e8eef2;
+            margin-bottom: 1.5rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .social-links a:hover {
+            opacity: 0.7;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #3498db;
+            border: 1px solid #3498db;
+        }
+
+        .btn-secondary:hover {
+            background: #f8f9fa;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid #e8eef2;
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: #3498db;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .about-highlights {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .highlight {
+            padding: 1rem;
+            background: #f8f9fa;
+            border-left: 3px solid #3498db;
+            border-radius: 4px;
+        }
+
+        .highlight strong {
+            color: #2c3e50;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-top: 3px solid #3498db;
+        }
+
+        .skill-category h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            display: inline-block;
+            background: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #3498db;
+            border: 1px solid #3498db;
+        }
+
+        /* Projects / Case Studies */
+        .case-study {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid #e8eef2;
+        }
+
+        .case-study:last-child {
+            border-bottom: none;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .project-header h3 {
+            margin: 0;
+        }
+
+        .project-date {
+            color: #888;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .project-description {
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .project-impact {
+            background: #ecf0f1;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .project-impact strong {
+            color: #27ae60;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 0.3rem 0.7rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e8eef2;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .role-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .company {
+            color: #3498db;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+
+        .role-period {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .role-description {
+            color: #555;
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            color: #555;
+        }
+
+        .contact-item a {
+            color: #3498db;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #f8f9fa;
+            padding: 2rem;
+            text-align: center;
+            color: #888;
+            font-size: 0.9rem;
+            margin-top: 3rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 2rem 1rem;
+            }
+
+            main {
+                padding: 0 1rem;
+            }
+
+            section {
+                padding: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header id="home">
+        <img src="profile.jpg" alt="Aida Farahani" class="profile-img">
+        <h1>Aida Farahani</h1>
+        <p class="tagline">AI Solution Engineer | PhD in AI | Building intelligent systems for real-world impact</p>
+
+        <div class="social-links">
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="mailto:contact@example.com">Email</a>
+        </div>
+
+        <div class="cta-buttons">
+            <a href="#contact" class="btn btn-primary">Get in Touch</a>
+            <a href="cv.pdf" class="btn btn-secondary" download>Download CV</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <section id="about">
+            <h2>About</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I'm an AI Solution Engineer with a PhD in Artificial Intelligence, specializing in designing and deploying
+                        intelligent systems that solve complex business problems. With expertise in machine learning, deep learning,
+                        and practical AI implementation, I bridge the gap between cutting-edge research and production applications.
+                    </p>
+                    <p>
+                        My background combines theoretical foundations from academic research with hands-on experience building scalable
+                        AI solutions in industry. I'm passionate about translating data into actionable insights and creating systems
+                        that drive measurable business value.
+                    </p>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight">
+                        <strong>PhD in Artificial Intelligence</strong><br>
+                        Technical University of Chemnitz
+                    </div>
+                    <div class="highlight">
+                        <strong>Expertise</strong><br>
+                        ML/DL Systems, NLP, Computer Vision, Data-Driven Solutions
+                    </div>
+                    <div class="highlight">
+                        <strong>Focus</strong><br>
+                        Production AI, System Design, Scalability
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2>Experience</h2>
+
+            <div class="experience-item">
+                <div class="role-title">AI Solution Engineer</div>
+                <div class="company">Company Name</div>
+                <div class="role-period">2024 - Present</div>
+                <div class="role-description">
+                    Designing and implementing AI solutions for enterprise clients. Responsibilities include requirements gathering,
+                    architecture design, model optimization, and deployment to production environments.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="role-title">PhD Researcher</div>
+                <div class="company">Technical University of Chemnitz</div>
+                <div class="role-period">2021 - 2024</div>
+                <div class="role-description">
+                    Conducted research on applied machine learning, focusing on optimization and efficient model inference.
+                    Published work on data-driven solutions and participated in BMBF-funded projects.
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills & Technologies</h2>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>📊 Core ML/AI</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">Optimization</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>💻 Languages & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">Scikit-learn</span>
+                        <span class="tag">Pandas</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🚀 Production & Deployment</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Docker</span>
+                        <span class="tag">MLOps</span>
+                        <span class="tag">Cloud (AWS/Azure)</span>
+                        <span class="tag">API Development</span>
+                        <span class="tag">Model Serving</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🔧 Additional</h3>
+                    <div class="skill-tags">
+                        <span class="tag">SQL</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">Agile</span>
+                        <span class="tag">Data Analysis</span>
+                        <span class="tag">Visualization</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects / Case Studies Section -->
+        <section id="projects">
+            <h2>Case Studies & Projects</h2>
+
+            <div class="case-study">
+                <div class="project-header">
+                    <h3>Project Title 1: [Solution Name]</h3>
+                    <span class="project-date">2024</span>
+                </div>
+                <p class="project-description">
+                    Brief description of the problem you solved. Focus on the business challenge, not just the technical details.
+                </p>
+                <div class="project-impact">
+                    <strong>Impact:</strong> Quantifiable results (e.g., 40% improvement, $2M saved, 10x faster processing, 95% accuracy)
+                </div>
+                <div class="project-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">PyTorch</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">AWS</span>
+                </div>
+            </div>
+
+            <div class="case-study">
+                <div class="project-header">
+                    <h3>Project Title 2: [Solution Name]</h3>
+                    <span class="project-date">2023</span>
+                </div>
+                <p class="project-description">
+                    Brief description of the problem you solved. Focus on the business challenge, not just the technical details.
+                </p>
+                <div class="project-impact">
+                    <strong>Impact:</strong> Quantifiable results (e.g., 40% improvement, $2M saved, 10x faster processing, 95% accuracy)
+                </div>
+                <div class="project-tags">
+                    <span class="tech-tag">TensorFlow</span>
+                    <span class="tech-tag">NLP</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                </div>
+            </div>
+
+            <div class="case-study">
+                <div class="project-header">
+                    <h3>Project Title 3: [Solution Name]</h3>
+                    <span class="project-date">2023</span>
+                </div>
+                <p class="project-description">
+                    Brief description of the problem you solved. Focus on the business challenge, not just the technical details.
+                </p>
+                <div class="project-impact">
+                    <strong>Impact:</strong> Quantifiable results (e.g., 40% improvement, $2M saved, 10x faster processing, 95% accuracy)
+                </div>
+                <div class="project-tags">
+                    <span class="tech-tag">Computer Vision</span>
+                    <span class="tech-tag">OpenCV</span>
+                    <span class="tech-tag">Real-time Processing</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Get in Touch</h2>
+
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h3>📧 Email</h3>
+                    <p><a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>💼 LinkedIn</h3>
+                    <p><a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>🔗 GitHub</h3>
+                    <p><a href="https://github.com/yourprofile" target="_blank">github.com/yourprofile</a></p>
+                </div>
+            </div>
+
+            <p style="color: #555; text-align: center; margin-top: 2rem;">
+                I'm always interested in discussing AI solutions, collaboration opportunities, and new challenges.
+                Feel free to reach out!
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Aida Farahani. All rights reserved. | Built with care</p>
+    </footer>
+</body>
+</html>

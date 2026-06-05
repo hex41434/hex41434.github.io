@@ -1,0 +1,16 @@
+services:
+  chatbot-backend:
+    build: .
+    restart: unless-stopped
+    environment:
+      OLLAMA_BASE_URL: http://host.docker.internal:11434
+      OLLAMA_MODEL: llama3.2:1b
+      ALLOWED_ORIGINS: https://hex41434.github.io,http://localhost:8000,http://127.0.0.1:8000
+      RATE_LIMIT_PER_MINUTE: 12
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../hex41434.github.io/data:/site-data:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+

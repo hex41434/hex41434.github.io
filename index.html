@@ -343,12 +343,14 @@
             padding: 0.32rem 0.68rem;
         }
 
-        .project-list {
+        .project-list,
+        .experience-list {
             display: grid;
             gap: 1.2rem;
         }
 
-        .project-header {
+        .project-header,
+        .experience-header {
             align-items: flex-start;
             display: flex;
             gap: 1rem;
@@ -356,7 +358,8 @@
             margin-bottom: 0.65rem;
         }
 
-        .project-date {
+        .project-date,
+        .experience-date {
             color: var(--muted);
             font-size: 0.9rem;
             white-space: nowrap;
@@ -373,6 +376,62 @@
 
         .project-impact strong {
             color: var(--accent-dark);
+        }
+
+        .detail-list {
+            color: var(--muted);
+            margin: 0.85rem 0 0;
+            padding-left: 1.25rem;
+        }
+
+        .detail-list li {
+            margin-bottom: 0.45rem;
+        }
+
+        .subproject {
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            margin-top: 1rem;
+            padding: 1rem;
+        }
+
+        .subproject h4 {
+            color: var(--accent-dark);
+            font-size: 1rem;
+            line-height: 1.35;
+            margin-bottom: 0.35rem;
+        }
+
+        .subproject-showcase {
+            align-items: start;
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: minmax(0, 1fr) minmax(280px, 50%);
+        }
+
+        .project-video {
+            background: #111827;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .project-video video {
+            background: #111827;
+            display: block;
+            height: auto;
+            margin: -1mm;
+            max-width: none;
+            width: calc(100% + 2mm);
+        }
+
+        .project-video figcaption {
+            color: var(--muted);
+            font-size: 0.92rem;
+            line-height: 1.6;
+            padding: 0.85rem 1rem;
         }
 
         .education-grid {
@@ -438,8 +497,13 @@
                 grid-template-columns: 1fr;
             }
 
-            .project-header {
+            .project-header,
+            .experience-header {
                 display: block;
+            }
+
+            .subproject-showcase {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -451,8 +515,9 @@
             <li><a href="#about">About</a></li>
             <li><a href="#expertise">Expertise</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#research">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#research">Research</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -592,182 +657,150 @@
             </div>
         </section>
 
-        <section id="projects">
-            <h2>Selected Projects</h2>
-            <div class="project-list">
-                <article class="case-study">
-                    <div class="project-header">
-                        <h3>Multimodal Image Search</h3>
-                        <span class="project-date">Retrieval · 2025</span>
-                    </div>
-                    <p class="project-description">
-                        Built semantic image retrieval tools using language-driven search and similarity-based clustering.
-                    </p>
-                    <div class="project-impact">
-                        <strong>Focus:</strong> CLIP-based embeddings, multimodal retrieval, image search, and clustering workflows.
-                    </div>
-                    <div class="project-tags">
-                        <span class="tech-tag">CLIP</span>
-                        <span class="tech-tag">Embeddings</span>
-                        <span class="tech-tag">Search</span>
-                    </div>
-                </article>
-
-                <article class="case-study">
-                    <div class="project-header">
-                        <h3>Document &amp; PDF Understanding</h3>
-                        <span class="project-date">Vision-Language · 2025</span>
-                    </div>
-                    <p class="project-description">
-                        Developed pipelines for extracting structured data from documents using vision-language methods.
-                    </p>
-                    <div class="project-impact">
-                        <strong>Focus:</strong> document understanding, structured extraction, multimodal parsing, and workflow automation.
-                    </div>
-                    <div class="project-tags">
-                        <span class="tech-tag">Documents</span>
-                        <span class="tech-tag">PDF</span>
-                        <span class="tech-tag">Multimodal AI</span>
-                    </div>
-                </article>
-
-                <article class="case-study">
-                    <div class="project-header">
-                        <h3>Data-Centric Model Improvement</h3>
-                        <span class="project-date">Model Reliability · 2024 – present</span>
-                    </div>
-                    <p class="project-description">
-                        Designed workflows to improve model performance through targeted data quality improvements.
-                    </p>
-                    <div class="project-impact">
-                        <strong>Focus:</strong> annotation strategy, failure-case driven dataset updates, and iterative performance optimization.
-                    </div>
-                    <div class="project-tags">
-                        <span class="tech-tag">Dataset Design</span>
-                        <span class="tech-tag">Error Analysis</span>
-                        <span class="tech-tag">Evaluation</span>
-                    </div>
-                </article>
-
-                <article class="case-study">
-                    <div class="project-header">
-                        <h3>Industrial Vision: Trench &amp; Fiber Detection</h3>
-                        <span class="project-date">Industrial AI · 2024</span>
-                    </div>
-                    <p class="project-description">
-                        Designed segmentation pipelines for detecting trenches, ducts, and fittings in noisy field conditions.
-                    </p>
-                    <div class="project-impact">
-                        <strong>Focus:</strong> instance segmentation for complex scenes, dataset refinement, class balancing, and field-condition evaluation.
-                    </div>
-                    <div class="project-tags">
-                        <span class="tech-tag">Computer Vision</span>
-                        <span class="tech-tag">Segmentation</span>
-                        <span class="tech-tag">Data-Centric AI</span>
-                    </div>
-                </article>
-
-                <article class="case-study">
-                    <div class="project-header">
-                        <h3>On-Device Vision Inference</h3>
-                        <span class="project-date">Deployment · 2024</span>
-                    </div>
-                    <p class="project-description">
-                        Implemented real-time vision models on mobile devices with model optimization and iOS integration.
-                    </p>
-                    <div class="project-impact">
-                        <strong>Focus:</strong> CoreML export, Swift/iOS integration, visualization, and field-ready inference prototypes.
-                    </div>
-                    <div class="project-tags">
-                        <span class="tech-tag">CoreML</span>
-                        <span class="tech-tag">Swift</span>
-                        <span class="tech-tag">Mobile AI</span>
-                    </div>
-                </article>
-
-                <article class="case-study">
-                    <div class="project-header">
-                        <h3>Smart Airsense (BMBF)</h3>
-                        <span class="project-date">Jan 2022 – 2024</span>
-                    </div>
-                    <p class="project-description">
-                        Researcher on the BMBF project investigating AI methods for an interactive health assistant based on human-in-the-loop machine learning.
-                    </p>
-                    <div class="project-impact">
-                        <strong>Focus:</strong> completed the first phase of a time series classification project using air particle sensor measurements to predict environmental events.
-                    </div>
-                    <div class="project-tags">
-                        <span class="tech-tag">Time Series</span>
-                        <span class="tech-tag">Sensor Data</span>
-                        <span class="tech-tag">Predictive Modeling</span>
-                        <span class="tech-tag">Human-in-the-Loop ML</span>
-                    </div>
-                    <p class="project-description">
-                        Partners: Corant GmbH, TU Chemnitz.
-                    </p>
-                </article>
-
-                <article class="case-study">
-                    <div class="project-header">
-                        <h3>3D Deformation Modeling (FEM Surrogate)</h3>
-                        <span class="project-date">PhD Research · 2021 – 2023</span>
-                    </div>
-                    <p class="project-description">
-                        Used reinforcement learning approaches for reverse engineering of metal forming process chains (prediction of actions for a desired deformed metal part).
-                    </p>
-                    <div class="project-impact">
-                        <strong>Focus:</strong> sequential deformation modeling and reinforcement learning for process optimization.
-                    </div>
-                    <div class="project-tags">
-                        <span class="tech-tag">Scientific ML</span>
-                        <span class="tech-tag">FEM</span>
-                        <span class="tech-tag">3D Learning</span>
-                    </div>
-                </article>
-
-                <article class="case-study">
-                    <div class="project-header">
-                        <h3>ML@Karoprod (BMBF)</h3>
-                        <span class="project-date">Feb 2018 – Jun 2021</span>
-                    </div>
-                    <p class="project-description">
-                        Researcher on the BMBF project applying machine learning for process and quality prediction in automotive body production.
-                    </p>
-                    <div class="project-impact">
-                        <strong>Focus:</strong> FEM-based dataset generation, deformation-property prediction, reinforcement learning for process modeling, and simulation-to-ML workflows for forming processes.
-                    </div>
-                    <div class="project-tags">
-                        <span class="tech-tag">FEM</span>
-                        <span class="tech-tag">Scientific ML</span>
-                        <span class="tech-tag">Reinforcement Learning</span>
-                        <span class="tech-tag">Automotive Production</span>
-                    </div>
-                    <p class="project-description">
-                        Partners: Fraunhofer IWU Dresden, Scale GmbH, TU Chemnitz.
-                        <a href="https://hamkerlab.github.io/ML-Karoprod-MeshPredictor/" target="_blank" rel="noopener">Project code</a>
-                    </p>
-                </article>
-            </div>
-        </section>
-
         <section id="research">
             <h2>Research &amp; Education</h2>
             <div class="education-grid">
                 <div class="education-item">
                     <h3>PhD in Artificial Intelligence</h3>
-                    <p>Technical University of Chemnitz</p>
-                    <p>Thesis: <em>Exploring Deep Learning Approaches for 3D Deformation : Toward Finite Element Method Distillation</em></p>
+                    <p><a href="https://www.tu-chemnitz.de/" target="_blank" rel="noopener">Technical University of Chemnitz</a>, Germany | 2026</p>
+                    <p>Thesis: <em>Exploring Deep Learning Approaches for 3D Deformation: Toward Finite Element Method Distillation</em></p>
                 </div>
                 <div class="education-item">
                     <h3>M.Sc. Mechatronics Engineering</h3>
-                    <p>K.N. Toosi University</p>
-                    <p>Thesis: Visual servoing and object pose estimation</p>
+                    <p>K.N. Toosi University of Technology, Iran | 2010</p>
+                    <p>Thesis: <em>Visual Servoing and Object Pose Estimation - 6 DOF Robot Manipulator</em></p>
                 </div>
                 <div class="education-item">
                     <h3>B.Sc. Computer Software Engineering</h3>
-                    <p>IAU Tehran</p>
-                    <p>Thesis: Persian handwriting recognition</p>
+                    <p>IAU Tehran Branch, Iran | 2006</p>
+                    <p>Thesis: <em>Online Persian Handwriting Recognition using Neural Networks</em></p>
                 </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="experience-list">
+                <article class="case-study">
+                    <div class="experience-header">
+                        <h3>AI Solutions Engineer - <a href="https://www.tki-chemnitz.com/" target="_blank" rel="noopener">TKI mbH</a>, Germany</h3>
+                        <span class="experience-date">2024 - Present</span>
+                    </div>
+                    <ul class="detail-list">
+                        <li>Develop AI solutions for industrial inspection, infrastructure analysis, document understanding, and semantic retrieval.</li>
+                        <li>Design computer vision systems for object detection, duct segmentation, color detection, and noisy real-world field imagery.</li>
+                        <li>Prepare deployment-oriented prototypes, including CoreML export and iOS visualization workflows.</li>
+                        <li>Improve model performance through data-centric AI: dataset refinement, annotation strategy, class balancing, and failure-case analysis.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="tech-tag">Industrial AI</span>
+                        <span class="tech-tag">Computer Vision</span>
+                        <span class="tech-tag">CoreML</span>
+                        <span class="tech-tag">Data-Centric AI</span>
+                    </div>
+                </article>
+
+                <article class="case-study">
+                    <div class="experience-header">
+                        <h3>Research Scientist - <a href="https://www.tu-chemnitz.de/" target="_blank" rel="noopener">Technische Universitaet Chemnitz</a>, Germany</h3>
+                        <span class="experience-date">2018 - 2024</span>
+                    </div>
+                    <p>
+                        Research career focused on machine learning for engineering simulation, 3D deformation modeling,
+                        automotive body production, and environmental sensor analysis across BMBF-funded applied research projects.
+                    </p>
+
+                    <div class="subproject">
+                        <h4>ML@Karoprod: Machine Learning for Automotive Body Production</h4>
+                        <div class="subproject-showcase">
+                            <div>
+                                <p class="project-description">
+                                    BMBF project with <a href="https://www.iwu.fraunhofer.de/" target="_blank" rel="noopener">Fraunhofer IWU</a>,
+                                    <a href="https://www.scale.eu/en/" target="_blank" rel="noopener">SCALE GmbH</a>, and
+                                    <a href="https://www.tu-chemnitz.de/" target="_blank" rel="noopener">TU Chemnitz</a>.
+                                </p>
+                                <ul class="detail-list">
+                                    <li>Created <a href="https://www.tu-chemnitz.de/informatik/KI/projects/geometricdeeplearning/index.php" target="_blank" rel="noopener">large-scale FEM training datasets</a> for sheet metal forming where no suitable dataset existed.</li>
+                                    <li>Used implicit neural representations, including signed distance functions, for dense deformable geometries.</li>
+                                    <li>Developed surrogate models for geometric deviation, thickness distribution, and thinning on high-resolution shell meshes, including the <a href="https://github.com/hamkerlab/ML-Karoprod-MeshPredictor" target="_blank" rel="noopener">ML-Karoprod MeshPredictor</a>.</li>
+                                    <li>Built reinforcement learning approaches for inverse process design and sequential deformation modeling.</li>
+                                </ul>
+                            </div>
+                            <figure class="project-video">
+                                <video autoplay controls loop muted playsinline preload="metadata">
+                                    <source src="media/params_slider.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <figcaption>
+                                    Neural-network prediction demo: deformation results update within seconds from slider parameters,
+                                    avoiding a fresh FEM setup and full simulation run for each variation.
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div class="subproject">
+                        <h4>Smart Airsense: AI-Based Health Assistant</h4>
+                        <p class="project-description">
+                            BMBF project with <a href="https://en.air-q.com/" target="_blank" rel="noopener">Corant GmbH / air-Q</a>
+                            and <a href="https://www.tu-chemnitz.de/" target="_blank" rel="noopener">TU Chemnitz</a>.
+                        </p>
+                        <ul class="detail-list">
+                            <li>Worked with air-quality sensor measurements logged over time by <a href="https://en.air-q.com/" target="_blank" rel="noopener">Corant / air-Q</a> devices.</li>
+                            <li>Added machine learning methods for predicting environmental events from noisy real-world time-series data.</li>
+                            <li>Developed and validated predictive models in a human-in-the-loop machine learning setting.</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Selected Applied Projects</h2>
+            <div class="project-list">
+                <article class="case-study">
+                    <div class="project-header">
+                        <h3>Industrial Vision: Field Detection and Deployment Prototypes</h3>
+                        <span class="project-date">Applied AI · 2024 - Present</span>
+                    </div>
+                    <p class="project-description">
+                        Built field-ready computer vision workflows for construction-site and infrastructure imagery.
+                    </p>
+                    <ul class="detail-list">
+                        <li>Designed segmentation pipelines for trenches, ducts, fibers, and fittings in construction-site imagery.</li>
+                        <li>Handled lighting variation, occlusion, dirt, shadows, and ambiguous material boundaries during evaluation.</li>
+                        <li>Converted models to CoreML and built iPhone prototypes for on-device visualization and testing.</li>
+                        <li>Connected annotation strategy, model evaluation, failure analysis, and deployment preparation in one workflow.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="tech-tag">Object Detection</span>
+                        <span class="tech-tag">Instance Segmentation</span>
+                        <span class="tech-tag">CoreML</span>
+                        <span class="tech-tag">Swift/iOS</span>
+                    </div>
+                </article>
+
+                <article class="case-study">
+                    <div class="project-header">
+                        <h3>Local LLM, Multimodal Document Understanding and Semantic Search</h3>
+                        <span class="project-date">Applied AI · 2024 - 2026</span>
+                    </div>
+                    <p class="project-description">
+                        Developed privacy-conscious local AI workflows for documents, images, and knowledge extraction.
+                    </p>
+                    <ul class="detail-list">
+                        <li>Built local LLM-based workflows for document understanding, semantic search, and knowledge extraction without external cloud inference.</li>
+                        <li>Extracted structured information from complex technical documents, PDFs, and tables.</li>
+                        <li>Combined retrieval, vision-language models, and RAG-style approaches for automated document analysis.</li>
+                        <li>Built CLIP-based semantic image search using natural language queries, embeddings, and similarity-based clustering.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="tech-tag">Local LLMs</span>
+                        <span class="tech-tag">RAG</span>
+                        <span class="tech-tag">CLIP</span>
+                        <span class="tech-tag">PDF Understanding</span>
+                    </div>
+                </article>
             </div>
         </section>
 

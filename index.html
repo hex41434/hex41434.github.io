@@ -9,6 +9,7 @@
     <meta name="author" content="Aida Farahani">
     <meta name="google-site-verification" content="kxf_3PUzTFuj3gnXSneMkqVTZVSWj_Dgb15Qgk63_C0">
     <title>Aida Farahani, PhD | AI Solutions Engineer</title>
+    <link rel="stylesheet" href="css/chatbot.css">
     <style>
         * {
             box-sizing: border-box;
@@ -796,5 +797,37 @@
     <footer>
         <p>&copy; 2026 Aida Farahani.</p>
     </footer>
+
+    <button class="chatbot-launcher" type="button" aria-controls="aida-chatbot-panel" aria-expanded="false" data-chatbot-launcher>
+        <span class="chatbot-launcher-icon" aria-hidden="true">?</span>
+        Ask Aida AI
+    </button>
+
+    <aside class="chatbot-panel" id="aida-chatbot-panel" aria-label="Aida AI chatbot" data-chatbot-panel>
+        <div class="chatbot-header">
+            <div>
+                <h2>Aida AI</h2>
+                <p>Ask about Aida's CV, projects, skills, research, and contact details.</p>
+            </div>
+            <button class="chatbot-close" type="button" aria-label="Close chatbot" data-chatbot-close>&times;</button>
+        </div>
+        <div class="chatbot-messages" aria-live="polite" data-chatbot-messages>
+            <div class="chatbot-message bot">
+                Hi, I can answer questions about Aida's profile, projects, research, skills, and contact details.
+            </div>
+        </div>
+        <form class="chatbot-form" data-chatbot-form>
+            <div class="chatbot-input-row">
+                <input class="chatbot-input" type="text" name="message" autocomplete="off" maxlength="1200" placeholder="Ask about Aida's work..." data-chatbot-input>
+                <button class="chatbot-send" type="submit" data-chatbot-send>Send</button>
+            </div>
+            <p class="chatbot-note">Answers come from Aida's public website and CV. No browser LLM or WebGPU is used.</p>
+        </form>
+    </aside>
+
+    <script>
+        window.AIDA_CHATBOT_API_URL = window.AIDA_CHATBOT_API_URL || "";
+    </script>
+    <script src="js/chatbot.js" defer></script>
 </body>
 </html>

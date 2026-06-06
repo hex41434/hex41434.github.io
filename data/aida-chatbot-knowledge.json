@@ -1,0 +1,102 @@
+{
+  "version": "2026-06-05",
+  "owner": "Aida Farahani",
+  "chunks": [
+    {
+      "id": "profile",
+      "title": "Profile",
+      "source": "website",
+      "text": "Aida Farahani, PhD is an AI Solutions Engineer focused on industrial AI, computer vision, data-centric AI, hybrid AI systems, and deployed machine learning workflows. She builds practical and reliable AI systems for real-world applications."
+    },
+    {
+      "id": "about",
+      "title": "About",
+      "source": "website",
+      "text": "Aida works on end-to-end AI system design, from problem definition and dataset construction to model development, evaluation, integration, and deployment. She specializes in improving model performance through data refinement and designing hybrid systems that combine vision, geometry, and language models."
+    },
+    {
+      "id": "expertise",
+      "title": "Core Expertise",
+      "source": "website",
+      "text": "Core expertise includes computer vision, data-centric AI, AI systems, multimodal AI, deployment, and scientific machine learning. Her computer vision work covers object detection, instance segmentation, industrial image understanding, field-condition evaluation, and visual inspection workflows."
+    },
+    {
+      "id": "skills",
+      "title": "Skills",
+      "source": "cv",
+      "text": "Aida's skills include Python, pandas, trimesh, plotly, meshlab, PyTorch Geometric, PyTorch, TensorFlow, scikit-learn, Docker, conda, Linux, Git, Jenkins, Jupyter, RAG, CLIP, document and PDF understanding, Ollama, Unsloth, C#.NET, C++, MATLAB, CoreML, Swift/iOS, on-device inference, and model export."
+    },
+    {
+      "id": "multimodal-image-search",
+      "title": "Project: Multimodal Image Search",
+      "source": "website",
+      "text": "In 2025 Aida built semantic image retrieval tools using language-driven search and similarity-based clustering. The focus was CLIP-based embeddings, multimodal retrieval, image search, and clustering workflows."
+    },
+    {
+      "id": "document-pdf-understanding",
+      "title": "Project: Document and PDF Understanding",
+      "source": "website",
+      "text": "In 2025 Aida developed pipelines for extracting structured data from documents using vision-language methods. The focus was document understanding, structured extraction, multimodal parsing, and workflow automation."
+    },
+    {
+      "id": "data-centric-model-improvement",
+      "title": "Project: Data-Centric Model Improvement",
+      "source": "website",
+      "text": "From 2024 to present Aida designed workflows to improve model performance through targeted data quality improvements. The focus was annotation strategy, failure-case driven dataset updates, and iterative performance optimization."
+    },
+    {
+      "id": "industrial-vision",
+      "title": "Project: Industrial Vision Trench and Fiber Detection",
+      "source": "website",
+      "text": "In 2024 Aida designed segmentation pipelines for detecting trenches, ducts, and fittings in noisy field conditions. The focus was instance segmentation for complex scenes, dataset refinement, class balancing, and field-condition evaluation."
+    },
+    {
+      "id": "on-device-vision",
+      "title": "Project: On-Device Vision Inference",
+      "source": "website",
+      "text": "In 2024 Aida implemented real-time vision models on mobile devices with model optimization and iOS integration. The focus was CoreML export, Swift/iOS integration, visualization, and field-ready inference prototypes."
+    },
+    {
+      "id": "smart-airsense",
+      "title": "Project: Smart Airsense",
+      "source": "cv",
+      "text": "From January 2022 to 2024 Aida was a researcher on the BMBF Smart Airsense project investigating AI methods for an interactive health assistant based on human-in-the-loop machine learning. The work included time series classification using air particle sensor measurements to predict environmental events. Partners included Corant GmbH and TU Chemnitz."
+    },
+    {
+      "id": "phd-research",
+      "title": "Project: 3D Deformation Modeling",
+      "source": "cv",
+      "text": "From 2021 to 2023 Aida's PhD research used reinforcement learning approaches for reverse engineering metal forming process chains, predicting actions for a desired deformed metal part. The focus was sequential deformation modeling and reinforcement learning for process optimization."
+    },
+    {
+      "id": "karoprod",
+      "title": "Project: ML@Karoprod",
+      "source": "cv",
+      "text": "From February 2018 to June 2021 Aida was a researcher on the BMBF ML@Karoprod project applying machine learning for process and quality prediction in automotive body production. The focus was FEM-based dataset generation, deformation-property prediction, reinforcement learning for process modeling, and simulation-to-ML workflows for forming processes. Partners included Fraunhofer IWU Dresden, Scale GmbH, and TU Chemnitz."
+    },
+    {
+      "id": "education",
+      "title": "Research and Education",
+      "source": "cv",
+      "text": "Aida has a PhD in Artificial Intelligence from Technical University of Chemnitz, Germany. Her thesis is titled Exploring Deep Learning Approaches for 3D Deformation: Toward Finite Element Method Distillation. She has an M.Sc. in Mechatronics Engineering from K.N. Toosi University of Technology with a thesis on visual servoing and object pose estimation, and a B.Sc. in Computer Software Engineering from IAU Tehran Branch with a thesis on Persian handwriting recognition."
+    },
+    {
+      "id": "languages",
+      "title": "Languages",
+      "source": "cv",
+      "text": "Aida's languages are Farsi as native language, English as business fluent, German at B2 upper-intermediate professional working proficiency, and basic French."
+    },
+    {
+      "id": "contact",
+      "title": "Contact",
+      "source": "website",
+      "text": "Aida is based in Chemnitz, Germany. Public contact options on the website include email at aida.farahani@gmail.com, LinkedIn at https://www.linkedin.com/in/aidafarahani/, GitHub at https://github.com/hex41434, and phone at +49-157-5875-1188. The website does not list a contact form."
+    },
+    {
+      "id": "cv",
+      "title": "CV",
+      "source": "website",
+      "text": "Aida's CV is available from the website at cv/Aida_Farahani.pdf and cv/Aida_Farahani.md."
+    }
+  ]
+}

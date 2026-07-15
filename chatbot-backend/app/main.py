@@ -13,13 +13,17 @@ from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 
 
-DEFAULT_ALLOWED_ORIGINS = "http://localhost:8000,http://127.0.0.1:8000,https://hex41434.github.io"
+DEFAULT_ALLOWED_ORIGINS = (
+    "http://localhost:8000,http://127.0.0.1:8000,"
+    "http://localhost:8080,http://127.0.0.1:8080,"
+    "https://hex41434.github.io"
+)
 KNOWLEDGE_PATH = Path(os.getenv("KNOWLEDGE_PATH", "/site-data/aida-chatbot-knowledge.json"))
 if not KNOWLEDGE_PATH.exists():
     KNOWLEDGE_PATH = Path(__file__).resolve().parents[2] / "hex41434.github.io" / "data" / "aida-chatbot-knowledge.json"
 
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434").rstrip("/")
-OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.2:1b")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "qwen2.5:7b")
 RATE_LIMIT_PER_MINUTE = int(os.getenv("RATE_LIMIT_PER_MINUTE", "12"))
 REQUEST_TIMEOUT_SECONDS = float(os.getenv("REQUEST_TIMEOUT_SECONDS", "45"))
 MAX_MESSAGE_LENGTH = int(os.getenv("MAX_MESSAGE_LENGTH", "1200"))
@@ -29,7 +33,17 @@ TOKEN_PATTERN = re.compile(r"[a-zA-Z0-9+#.]+")
 STOPWORDS = {
     "a", "about", "an", "and", "are", "as", "at", "be", "by", "can", "for", "from",
     "has", "have", "her", "how", "i", "in", "is", "it", "me", "of", "on", "or",
-    "she", "that", "the", "this", "to", "what", "with", "you", "your"
+    "she", "that", "the", "this", "to", "what", "where", "with", "you", "your"
+}
+TOKEN_ALIASES = {
+    "bsc": {"bachelor", "bachelors", "degree", "education"},
+    "bachelor": {"bsc", "bachelors", "degree", "education"},
+    "bachelors": {"bsc", "bachelor", "degree", "education"},
+    "doctorate": {"phd", "degree", "education"},
+    "master": {"msc", "masters", "degree", "education"},
+    "masters": {"msc", "master", "degree", "education"},
+    "msc": {"master", "masters", "degree", "education"},
+    "phd": {"doctorate", "degree", "education"},
 }
 
 
@@ -72,12 +86,20 @@ app.add_middleware(
 request_log: dict[str, deque[float]] = defaultdict(deque)
 
 
+def normalize_token(token: str) -> str:
+    return token.lower().replace(".", "").strip()
+
+
 def tokenize(text: str) -> set[str]:
-    return {
-        token.lower()
-        for token in TOKEN_PATTERN.findall(text)
-        if len(token) > 1 and token.lower() not in STOPWORDS
-    }
+    tokens: set[str] = set()
+    for raw_token in TOKEN_PATTERN.findall(text):
+        token = normalize_token(raw_token)
+        if len(token) <= 1 or token in STOPWORDS:
+            continue
+
+        tokens.add(token)
+        tokens.update(TOKEN_ALIASES.get(token, set()))
+    return tokens
 
 
 def retrieve_chunks(message: str, limit: int = 5) -> list[dict[str, str]]:
@@ -131,7 +153,9 @@ def build_messages(user_message: str, chunks: list[dict[str, str]]) -> list[dict
         "Answer only about Aida Farahani's profile, CV, projects, research, skills, education, contact, and website content. "
         "Use only the supplied context. If the answer is not present in the context, say that the website does not include that information. "
         "Do not invent employment history, credentials, publications, phone numbers, or project claims. "
+        "Do not mention a contact form. The website does not list one. "
         "For contact questions, provide only the public contact options from the context. "
+        "Do not include contact details unless the visitor asks for contact information. "
         "Keep answers concise, helpful, and factual."
     )
     user_prompt = f"Context:\n{context}\n\nVisitor question: {user_message}"

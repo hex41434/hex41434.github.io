@@ -1,0 +1,6 @@
+.DS_Store
+._*
+chatbot-backend/.venv/
+chatbot-backend/__pycache__/
+chatbot-backend/app/__pycache__/
+

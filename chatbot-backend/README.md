@@ -4,6 +4,20 @@ FastAPI backend for the personal website chatbot. It exposes a narrow `POST /api
 
 ## Local Development
 
+The easiest local path is to start both the backend and the static website from the `personalwebpage` directory:
+
+```bash
+./start-chatbot-local.sh
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8080
+```
+
+Do not open `index.html` directly from Finder or the editor. The chatbot frontend expects the page to be served over HTTP so it can call the local API at `http://127.0.0.1:8000/api/chat`.
+
 Install dependencies:
 
 ```bash
@@ -12,10 +26,16 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Install Ollama and pull the default CPU-friendly model:
+Install Ollama and pull the default model:
 
 ```bash
-ollama pull llama3.2:1b
+ollama pull qwen2.5:7b
+```
+
+If you already have another Ollama model, set it explicitly before starting the backend:
+
+```bash
+OLLAMA_MODEL=llama3.2:1b ./start-chatbot-local.sh
 ```
 
 Run the backend:
@@ -35,7 +55,7 @@ curl -s http://127.0.0.1:8000/api/chat \
 ## Environment Variables
 
 - `OLLAMA_BASE_URL`: Ollama base URL. Default: `http://127.0.0.1:11434`.
-- `OLLAMA_MODEL`: model name. Default: `llama3.2:1b`.
+- `OLLAMA_MODEL`: model name. Default: `qwen2.5:7b`.
 - `ALLOWED_ORIGINS`: comma-separated browser origins allowed by CORS. Default includes local development and `https://hex41434.github.io`.
 - `RATE_LIMIT_PER_MINUTE`: per-IP request limit. Default: `12`.
 - `REQUEST_TIMEOUT_SECONDS`: Ollama request timeout. Default: `45`.
@@ -59,7 +79,7 @@ If Ollama runs in another container or on another host, update `OLLAMA_BASE_URL`
 4. Pull the default model:
 
    ```bash
-   ollama pull llama3.2:1b
+   ollama pull qwen2.5:7b
    ```
 
 5. Run this backend with Docker Compose or systemd.
@@ -106,4 +126,3 @@ Response:
 ## Guardrails
 
 The backend prompt restricts answers to Aida Farahani's public profile, CV, projects, research, skills, education, contact, and website content. If a fact is not present in the supplied context, the model is instructed to say that the website does not include that information.
-

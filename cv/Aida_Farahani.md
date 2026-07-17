@@ -28,11 +28,7 @@ pdf_options:
 
 ## About
 
-I am an AI Solutions Engineer with a PhD in Artificial Intelligence, focused on building practical, reliable AI systems for real-world applications.
-
-My work centers on industrial computer vision, data-centric AI, and end-to-end system design: from problem definition and dataset construction to model development, evaluation, integration, and deployment.
-
-I specialize in improving model performance through data refinement and in designing hybrid systems that combine vision, geometry, and language models.
+I am an AI Solutions Engineer with a PhD in Artificial Intelligence, specializing in turning real-world, cross-disciplinary challenges into practical and reliable AI systems. My journey into AI began in my twenties, before frameworks such as TensorFlow and PyTorch were available, when I designed and trained a neural network for my BSc thesis in Software Engineering. Since then, I have worked across industrial computer vision, data-centric AI, time-series analysis, 3D deep learning, machine learning for FEM simulations, LLMs, VLMs, RAG, AI agents, and end-to-end AI development—primarily with complex, real-world data rather than standard benchmarks. Having witnessed AI evolve from low-level implementations to today’s AI-assisted development, I remain deeply fascinated by its progress and possibilities.
 
 <p class="highlight-line"><strong>PhD in Artificial Intelligence</strong> — Technical University of Chemnitz</p>
 <p class="highlight-line"><strong>Applied AI Focus</strong> — Industrial computer vision, data-centric AI, and production-oriented workflows</p>

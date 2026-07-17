@@ -12,7 +12,7 @@
       "id": "about",
       "title": "About",
       "source": "website",
-      "text": "Aida works on end-to-end AI system design, from problem definition and dataset construction to model development, evaluation, integration, and deployment. She specializes in improving model performance through data refinement and designing hybrid systems that combine vision, geometry, and language models."
+      "text": "Aida Farahani is an AI Solutions Engineer with a PhD in Artificial Intelligence, specializing in turning real-world, cross-disciplinary challenges into practical and reliable AI systems. Her journey into AI began in her twenties, before frameworks such as TensorFlow and PyTorch were available, when she designed and trained a neural network for her BSc thesis in Software Engineering. Since then, she has worked across industrial computer vision, data-centric AI, time-series analysis, 3D deep learning, machine learning for FEM simulations, LLMs, VLMs, RAG, AI agents, and end-to-end AI development, primarily with complex, real-world data rather than standard benchmarks. Having witnessed AI evolve from low-level implementations to today's AI-assisted development, she remains deeply fascinated by its progress and possibilities."
     },
     {
       "id": "expertise",
